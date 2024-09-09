@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agricultural Data Collection</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body onload="initializePage()">
+    <div class="container">
+        <h1>Agricultural Data Collection</h1>
+
+        <!-- Input fields for different data types -->
+        <div class="input-group">
+            <label for="sensorReadings">Sensor Readings (Temperature, Humidity):</label>
+            <input type="text" id="sensorReadings" placeholder="e.g., 23.5, 45.2">
+        </div>
+
+        <div class="input-group">
+            <label for="cropPhoto">Crop Photo (Base64 encoded):</label>
+            <input type="file" id="cropPhoto" accept="image/*">
+        </div>
+
+        <div class="input-group">
+            <label for="farmerNote">Farmer Note:</label>
+            <input type="text" id="farmerNote" placeholder="Enter farmer note">
+        </div>
+
+        <div class="input-group">
+            <label for="gpsCoordinates">GPS Coordinates (Latitude):</label>
+            <input type="number" id="gpsCoordinates" placeholder="e.g., 37.7749">
+        </div>
+
+        <button onclick="storeData()">Save Data</button>
+
+        <!-- Section to display retrieved data -->
+        <div id="displayData" class="display-data">
+            <h2>Retrieved Data</h2>
+            <pre id="retrievedData"></pre>
+        </div>
+    </div>
+
+    <!-- Include JavaScript file -->
+    <script src="app.js"></script>
+</body>
+</html>
